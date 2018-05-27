@@ -26,11 +26,23 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @if (User.IsInRole(AppEnum.RoleEnum.Adminstrator.ToString()))
                     {
-                        <li>@Html.ActionLink("Event Type", "EventType", "Event")</li>
-                        <li>@Html.ActionLink("Event Venue", "EventVenue", "Event")</li>
-                        <li>@Html.ActionLink("Create Event", "CreateEvent", "Event")</li>
-                        <li>@Html.ActionLink("View Event", "ViewEvent", "Event")</li>
-                        <li>@Html.ActionLink("View Index", "EventIndex", "Event")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Event Info<span class="caret"></span></a>
+                            <ul class="dropdown-menu alert-info">
+                                <li>@Html.ActionLink("Event Type", "EventType", "Event")</li>
+                                <li>@Html.ActionLink("Event Venue", "EventVenue", "Event")</li>
+                                <li>@Html.ActionLink("Create Event", "CreateEvent", "Event")</li>
+                                <li>@Html.ActionLink("Publish Event", "ViewEvent", "Event")</li>
+                                <li>@Html.ActionLink("Active Event", "EventIndex", "Event")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Registration Info<span class="caret"></span></a>
+                            <ul class="dropdown-menu alert-info">
+                                <li>@Html.ActionLink("Create Registration", "Create", "RegistrationDetails")</li>
+                                <li>@Html.ActionLink("Index", "Index", "RegistrationDetails")</li>
+                            </ul>
+                        </li>
                     }
                     
                 </ul>

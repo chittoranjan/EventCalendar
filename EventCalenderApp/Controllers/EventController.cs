@@ -412,10 +412,6 @@ namespace EventCalenderApp.Controllers
         {
             try
             {
-                //if (User.IsInRole(AppEnum.RoleEnum.User.ToString()))
-                //{
-                //    return new HttpNotFoundResult();
-                //}
                 var dataList = (from s in db.EventDetails
                     where (s.IsPublished && s.IsDeleted == false)
                     join et in db.EventTypes on s.EventTypeId equals et.EventTypeId

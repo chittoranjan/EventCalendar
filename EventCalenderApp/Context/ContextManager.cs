@@ -20,5 +20,6 @@ namespace EventCalenderApp.Context
         public DbSet<EventDetail> EventDetails { get; set; }
         public DbSet<EventType> EventTypes { get; set; }
         public DbSet<EventVenue> EventVenues { get; set; }
+        public DbSet<RegistrationDetail> RegistrationDetails { get; set; }
     }
 }

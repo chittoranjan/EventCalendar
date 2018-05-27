@@ -49,11 +49,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -185,6 +187,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RegistrationDetailsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +199,10 @@
     <Compile Include="Migrations\201805031602522_foreign_key_added.Designer.cs">
       <DependentUpon>201805031602522_foreign_key_added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805271657202_registrationdetail_model_added.cs" />
+    <Compile Include="Migrations\201805271657202_registrationdetail_model_added.Designer.cs">
+      <DependentUpon>201805271657202_registrationdetail_model_added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventDetail.cs" />
@@ -203,6 +210,7 @@
     <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RegistrationDetail.cs" />
     <Compile Include="Models\ViewModels\EventEditViewModel.cs" />
     <Compile Include="Models\ViewModels\EventDeleteViewModel.cs" />
     <Compile Include="Models\ViewModels\EventPublishViewModel.cs" />
@@ -212,6 +220,7 @@
     <Compile Include="Models\ViewModels\EventVenueViewModel.cs" />
     <Compile Include="Models\ViewModels\EventDetailViewModel.cs" />
     <Compile Include="Models\ViewModels\PublishedViewModels.cs" />
+    <Compile Include="Models\ViewModels\RegistrationDetailsViewModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -364,6 +373,11 @@
     <Content Include="Views\Event\Edit.cshtml" />
     <Content Include="Views\Event\Delete.cshtml" />
     <Content Include="Views\Event\EventIndex.cshtml" />
+    <Content Include="Views\RegistrationDetails\Create.cshtml" />
+    <Content Include="Views\RegistrationDetails\Delete.cshtml" />
+    <Content Include="Views\RegistrationDetails\Details.cshtml" />
+    <Content Include="Views\RegistrationDetails\Edit.cshtml" />
+    <Content Include="Views\RegistrationDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -378,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805031602522_foreign_key_added.resx">
       <DependentUpon>201805031602522_foreign_key_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805271657202_registrationdetail_model_added.resx">
+      <DependentUpon>201805271657202_registrationdetail_model_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

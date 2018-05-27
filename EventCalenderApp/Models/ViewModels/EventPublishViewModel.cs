@@ -33,7 +33,7 @@ namespace EventCalenderApp.Models.ViewModels
         [Display(Name = "Max Booking Time")]
         public DateTime? EventMaxBookingTime { get; set; }
 
-        public Boolean IsPublished { get; set; }
+        public bool IsPublished { get; set; }
 
         [Display(Name = "Is Published")]
         public string IsPublishedText => IsPublished ? "Yes" : "No";

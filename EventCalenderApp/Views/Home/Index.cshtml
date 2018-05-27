@@ -11,9 +11,19 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a>
     </p>
 </div>
-<div class="row">
-    @Html.Action("EventIndex","Event")
-</div>
+@foreach (var publishVm in Model)
+{
+    <div class="jumbotron">
+        <h2><span>Title : </span>@publishVm.EventTitle</h2>
+        <p><span>Type : </span>@publishVm.EventTypeName</p>
+        <p><span>Venue : </span>@publishVm.EventVenueName</p>
+        <p><span>Time : </span>@publishVm.EventStartTime<span> To </span>@publishVm.EventEndTime</p>
+        <p><span>Booking Time : </span>@publishVm.EventMaxBookingTime</p>
+        <p class="text-right">
+            @Html.ActionLink("Registration Now!", "Create", "RegistrationDetails", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-success" })
+        </p>
+    </div>
+}
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
